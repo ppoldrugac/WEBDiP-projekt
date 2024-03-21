@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <title>Dokumentacija</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Patricio Poldrugac">
+        <meta name="description" content="14.3.2022.">
+        <link href="css/ppoldruga.css" rel="stylesheet" type="text/css">
+    </head>
+    <body id="vrh">
+        <header>
+            <h1 class="naslov">Dokumentacija</h1>
+            <a href="index.php">
+                <img src="materijali/lutrijalogo.png" alt="Logo" class="logo"></a> 
+        </header>
+        <section id="sadrzaj">
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> Opis projektnog zadatka</h3>
+            <p class = "containerDokumentacija" style="line-height: 2.6;">
+                U sklopu kolegija Web dizajna i programiranja bilo je potrebno izraditi web stranicu. Tema moje grupe je "Igra na sreću".
+                Cilj ovog projekta je kreiranje, upravljanje i isplata dobitaka igara na sreću. Postoje 4 vrste uloga, a to su: neregistrirani korisnik, 
+                registrirani korisnik, moderator i administrator. Svaka uloga obilježava različite funkcionalnosti. Korisnici imaju opciju prijave i odjave 
+                s web stranice. Administratori imaju najveće ovlasti te oni kreiraju lutrije i dodjeljuju im moderatora. Također, kreiraju igre na sreću. 
+                Moderatori pridružuju igre na sreću za lutrije u kojima je dodijeljen te kreira kola. Registrirani korisnici uz pomoć generatora slučajnih 
+                brojeva mogu ispisati brojeve za igru na sreću. Neregistrirani korisnici imaju najmanje ovlasti te oni mogu vidjeti rang listu korisnika
+                prema isplaćenim dobicima i galeriju slika ispunjenih listića.</p>
+
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> Opis projektnog rješenja</h3>
+            <p class = "containerDokumentacija" style="line-height: 2.6;">
+                Na početnoj stranici korisnik se ima pravo prijaviti te ovisno o svojoj ulogi ima opcije kojima može pristupiti. Korisnik kada se ne prijavi
+                smatra se kao neregistrirani korisnik te ima dvije opcije: pregleda rang liste isplaćenih dobitaka u nekom vremenskom razdoblju i pregled galerija
+                slika ispunjenih listića uz mogućnost sortiranja po kolu ili ukupnom fondu uplaćenih listića te filtriranja po lutriji. Ukoliko je prijavljen registrirani
+                korisnik, tada on može odigrati igru na sreću, tj. generirat će sebi slučajne brojeve za tu igru. Moderatori kreiraju/pregledavaju/ažuriraju igre na sreću
+                za lutrije kojima je dodijeljen. Isto tako, kreira/pregledava/ažurira kola za određenu igru na sreću. Administrator ima najveće ovlasti te ima funkcionalnosti
+                prethodno opisanih uloga uz dodatak kreiranja/pregledavanja/ažuriranja lutrija te kreiranja/pregledavanja/ažuriranja igri na sreću.</p>
+
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> ERA model</h3>
+            <img class = "slikaEra" src="materijali/era.png" alt="era model">
+
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> Navigacijski dijagram</h3>
+            <img class = "slikaNavigacijski" src="materijali/navigacijski.png" alt="navigacijski dijagram">
+
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> Popis i opis skripata, mapa mjesta</h3>
+            <ul class= "containerDokumentacija" style="margin-left: 35px; line-height: 2.3;">
+                <li>mapa css - sadrži skriptu ppoldruga.css koja služi za oblikovanje web stranice</li>
+                <li>mapa javascirpt - sadrži skriptu ppoldruga.js i ppoldruga_jquery.js koja služi za validaciju na strani klijenta i slanje ajax zahtjeva</li>
+                <li>mapa izvorne_datoteke - sadržava .sql, i .mwb datoteke</li>
+                <li>mapa json - sadrži skriptu provjera_kor_ime.php koja provjerava korisničko ime u bazi putem ajaxa</li>
+                <li>mapa klase - sadrži skripte klasa, baza.class.php - spajanje na bazu, dnevnik.class.php - upravljanje s dnevnikom, sesija.class.php - kreiranje sesije</li>
+                <li>mapa materijali - sadrži fotografije (.png i .jpg datoteke)</li>
+                <li>mapa obrasci - sadrži stranice: aktivacija.php - aktivacija korisničkog računa, prijava.php - stranica prijave, registracija.php - stranica registracije</li>
+                <li>mapa privatno - sadrži .htaccess, .htpasswd i korisnici.php skripte koje služe za prikaz svih korisnika uz prethodnu prijavu pomoću korisničkog imena i lozinke</li>
+                <hr style="margin-right: 650px;">
+                <li>blokiranje_odblokiranje.php - stranica blokiranja i odblokiranja korisnika</li>
+                <li>dnevnik.php - stranica pregleda dnevnika</li>
+                <li>funkcije.php - sadrži funkcije generiranja lozinke i generiranja aktivacijskog koda</li>
+                <li>galerija_slika.php - stranica galerije slika ispunjenih listića</li>
+                <li>generator_reg.php - stranica na kojoj korisnik može generirati nasumične brojeve</li>
+                <li>igre.php - stranica koja služi za upravljanje igrama na sreću (administrator)</li>
+                <li>igre_moderator.php - stranica koja služi za upravljanje igrama na sreću (moderator)</li>
+                <li>index.php - početna stranica</li>
+                <li>isplata_dobitka.php - stranica na kojoj moderator potvrđuje zahtjeve korisnika za isplatu dobitka</li>
+                <li>kolo.php - stranica za upravljanje kolima</li>
+                <li>konfiguracija_sustava.php - stranica gdje administrator može konfigurirati sustav</li>
+                <li>listici.php - stranica gdje registrirani korisnik vidi svoje uplaćene listiće grupirane</li>
+                <li>lutrije.php - stranica za upravljanje lutrijama (administrator)</li>
+                <li>meni.php - skripta koja se uključuje u ostale stranice (izbornik)</li>
+                <li>rang_lista - stranica rang liste isplaćenih dobitaka</li>
+                <li>zaglavlje.php - skripta koja se uključuje u ostale stranice (sadrži uključivanje klasa baze, dnevnika i sesije)</li>
+            </ul>
+
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> Popis i opis korištenih tehnologija i alata</h3>         
+            <ul class= "containerDokumentacija" style="margin-left: 35px; line-height: 2.3;">
+                <li>Javascript - validacija na strani klijenta</li>
+                <li>JQuery - provjera putem ajaxa</li>
+                <li>PHP - rad s bazom, provjera zahtjeva POST i GET metodama</li>
+                <li>Filezilla - alat za prijenos datoteka na server</li>
+                <li>phpMyAdmin - unos podataka u tablice baze podataka i izrada potrebnih upita</li>
+                <li>MySQL Workbench - alat u kojem je izrađena baza podataka (ERA model)</li>
+                <li>Netbeans IDE - alat u kojem je napravljen projekt</li>
+                <li>Terminal - web server pomoću kojeg je testirano programsko rješnje</li> 
+            </ul>
+
+            <h3 class = "containerNaslovDokumentacija" style="margin-left: 25px;"> Popis i opis vanjskih biblioteka</h3>
+            <ul class= "containerDokumentacija" style="margin-left: 35px; line-height: 2.3;">
+                <li>Google reCAPTCHA - zaštita od automata</li>
+            </ul> 
+            
+        </section>    
+        <footer class="podnozje">
+            <a class="linkzafooter"
+               href="http://validator.w3.org/check?uri=http://barka.foi.hr/WebDiP/2021/zadaca_01/ppoldruga/index.html"><img src="materijali/HTML5.png" alt="html icon"></a>
+            <a class="linkzafooter"
+               href="https://jigsaw.w3.org/css-validator/validator?uri=http://barka.foi.hr/WebDiP/2021/zadaca_01/ppoldruga/css/ppoldruga.css"><img src="materijali/CSS3.png" alt="css icon"></a>
+            <address>Kontakt: 
+                <a style="color: white;" href="mailto:ppoldruga@foi.hr">
+                    <b>Patricio Poldrugač</b></a></address>
+            <p>&copy; 2022 P.Poldrugač</p>
+        </footer>
+    </body>
+</html>
+
